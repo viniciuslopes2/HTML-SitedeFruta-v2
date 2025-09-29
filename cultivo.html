@@ -4,61 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultivo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="flex-container">
-        <img src="./images/macaPequena.png" alt="logo">
-
-        <nav>
-            <a href="./home.html">Home</a>
-            <a href="#">Cultivo</a>
-            <a href="./sobre.html">Sobre</a>
-            <a href="./contato.html">Contato</a>
-            <a href="./galeria.html">Galeria</a>
+    <header class="container my-3">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./home.html"><img src="./images/macaPequena.png" alt="logo" class="img_logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="./cultivo.html">Cultivo</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Mais
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./sobre.html">Sobre</a></li>
+                                    <li><a class="dropdown-item" href="./contato.html">Contato</a></li>
+                                    <li><a class="dropdown-item" href="./galeria.html">Galeria</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
 
-        <section id="capa">
-            <h1>
-                Produção e Cultivo de maçãs
-            </h1>
-        </section>
-        
-        <section>
-            <article>
-                <p>
-                    A maçã é cultivada em várias regiões do mundo, especialmente em áreas de clima temperado. 
-                    O processo de produção envolve etapas como o plantio, a poda e a colheita, que garantem a qualidade da fruta. 
-                    No Brasil, os estados do Sul se destacam como principais produtores, aproveitando as condições ideais de clima e solo.
-                </p>
-
-                <p>
-                    O cultivo exige cuidados específicos, como a escolha adequada da variedade, controle de pragas e atenção ao clima. 
-                    Graças a essas práticas, as maçãs chegam frescas e saborosas às mesas de consumidores de diferentes países.
-                </p>
-            </article>
-        </section>
-
-        <section>
-            <article>
-                <h4>Mini tutorial sobre cultivar maçã</h4>
-                <p>
-                    1. Escolha da variedade – selecione uma variedade adequada ao clima da sua região (ex.: Fuji, Gala, Verde).<br><br>
-
-                    2. Plantio – plante em solo fértil, bem drenado e com boa exposição ao sol. Mantenha espaçamento adequado entre as árvores.<br><br>
-
-                    3. Irrigação – regue regularmente, principalmente nos primeiros anos, evitando encharcar o solo.<br><br>
-
-                    4. Poda – faça podas anuais para retirar galhos secos e estimular o crescimento saudável.<br><br>
-
-                    5. Controle de pragas e doenças – monitore a presença de insetos e fungos; use métodos orgânicos ou químicos conforme necessário.<br><br>
-
-                    6. Colheita – colha quando a fruta estiver firme e com a cor característica da variedade.
-                </p>
-            </article>
-        </section>
+    <main class="container">
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="content-card">
+                    <h2 class="mb-3">Produção e Cultivo de Maçãs</h2>
+                    <p>O cultivo exige cuidados específicos, como a escolha adequada da variedade, controle de pragas e atenção ao clima. Para ajudar, criamos um guia visual sobre a importância de cada etapa do processo.</p>
+                    
+                    <!-- Barras de Progresso -->
+                    <div class="progress-section">
+                        <label class="form-label">Importância do Plantio</label>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                        <label class="form-label mt-3">Importância da Irrigação</label>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                        <label class="form-label mt-3">Importância da Poda</label>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="content-card">
+                    <h4>Mini Tutorial de Cultivo</h4>
+                    <div class="accordion" id="cultivoAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    1. Escolha da variedade
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#cultivoAccordion">
+                                <div class="accordion-body">
+                                    Selecione uma variedade adequada ao clima da sua região (ex.: Fuji, Gala, Verde). Pesquise quais se adaptam melhor ao seu solo e às temperaturas locais.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. Plantio
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#cultivoAccordion">
+                                <div class="accordion-body">
+                                    Plante em solo fértil, bem drenado e com boa exposição ao sol. Mantenha um espaçamento de pelo menos 4 a 5 metros entre as árvores para garantir ventilação e luz solar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. Irrigação e Poda
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#cultivoAccordion">
+                                <div class="accordion-body">
+                                    Regue regularmente, principalmente nos primeiros anos, evitando encharcar o solo. Faça podas anuais para retirar galhos secos e estimular um crescimento saudável e uma boa produção de frutos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer class="footer mt-5">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="./images/macaPequena.png" alt="Footer Logo">
+                <div class="footer-text">
+                    <p>&copy; 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="./home.html">Home</a><span> | </span><a href="./contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

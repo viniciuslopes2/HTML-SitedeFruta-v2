@@ -4,48 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="flex-container">
-        <img src="./images/macaPequena.png" alt="logo">
-
-        <nav>
-            <a href="./home.html">Home</a>
-            <a href="./cultivo.html">Cultivo</a>
-            <a href="./sobre.html">Sobre</a>
-            <a href="./contato.html">Contato</a>
-            <a href="#">Galeria</a>
+    <header class="container my-3">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./home.html"><img src="./images/macaPequena.png" alt="logo" class="img_logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./cultivo.html">Cultivo</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Mais
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./sobre.html">Sobre</a></li>
+                                    <li><a class="dropdown-item" href="./contato.html">Contato</a></li>
+                                    <li><a class="dropdown-item" href="./galeria.html">Galeria</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
 
-        <section id="capa">
-            <h1>
-                Imagens de maçãs
-            </h1>
-        </section>
-            
-        <div class="gallery">
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" alt="Maçã Vermelha">
-                <p>Maçã Vermelha</p>
+    <main class="container">
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
-            <div class="card">
-                <img src="https://phygital-files.mercafacil.com/big_mart/uploads/produto/maca_verde_g_smith_kg_0b6a9047-6d20-4204-acca-6d914393073f.png" alt="Maçã Verde">
-                <p>Maçã Verde</p>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" class="d-block w-100" alt="Maçã Vermelha">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Maçã Vermelha</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://phygital-files.mercafacil.com/big_mart/uploads/produto/maca_verde_g_smith_kg_0b6a9047-6d20-4204-acca-6d914393073f.png" class="d-block w-100" alt="Maçã Verde">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Maçã Verde</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://obahortifruti.vtexassets.com/arquivos/ids/6148687/Maca-Golden-Delicious-Kg.png?v=638456682548670000" class="d-block w-100" alt="Maçã Amarela">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Maçã Amarela</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://superprix.vteximg.com.br/arquivos/ids/175177/Maca-Fuji--1-unidade-aprox.-200g-.png?v=636294176957700000" class="d-block w-100" alt="Maçã Fuji">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Maçã Fuji</h5>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="https://obahortifruti.vtexassets.com/arquivos/ids/6148687/Maca-Golden-Delicious-Kg.png?v=638456682548670000" alt="Maçã Amarela">
-                <p>Maçã Amarela</p>
-            </div>
-            <div class="card">
-                <img src="https://superprix.vteximg.com.br/arquivos/ids/175177/Maca-Fuji--1-unidade-aprox.-200g-.png?v=636294176957700000" alt="Maçã Fuji">
-                <p>Maçã Fuji</p>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
-
     </main>
+
+    <footer class="footer mt-5">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="./images/macaPequena.png" alt="Footer Logo">
+                <div class="footer-text">
+                    <p>&copy; 2025 - Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="./home.html">Home</a><span> | </span><a href="./contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
