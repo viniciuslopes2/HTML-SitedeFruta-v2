@@ -2,4 +2,4 @@ Esse repositório é o mesmo que o HTML-SitedeFruta, a única coisa que muda é 
 
 Link via GitHub Pages: https://viniciuslopes2.github.io/HTML-SitedeFruta-v2/
 
-Link via Vercel: html-sitede-fruta-v2.vercel.app 
+Link via Vercel: https://html-sitede-fruta-v2.vercel.app/home.html
